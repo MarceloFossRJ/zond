@@ -17,9 +17,6 @@ DATA_PATH = "../../data/books"
 loader = DirectoryLoader(DATA_PATH, glob="*.md")
 documents = loader.load()
 
-#loader = TextLoader("data.txt", encoding="utf-8")
-#documents = loader.load()
-
 # Split doc in chunks
 text_splitter = CharacterTextSplitter(chunk_size=300, chunk_overlap=100)
 docs = text_splitter.split_documents(documents)
